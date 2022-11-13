@@ -1,18 +1,9 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import Modal from './Modal';
 
 export default function MenuPrincipal(){
 
-
-    let history = useHistory();
-
-    const pvc = () => {
-        history.push("/pvc")
-    }
-    const pvp = () => {
-        history.push("/pvp")
-    }
 
     return (
         <div className="main-menu">
@@ -21,10 +12,10 @@ export default function MenuPrincipal(){
             </div>
             <div className="menu-body">
                 <div className="players-btn" >
-                    <button type="button" className="btn btn-primary btn-lg" id="one-player" onClick={pvc}>Un Jugador</button>
+                    <Link to='/pvc'><button type="button" className="btn btn-primary btn-lg" id="one-player" >Un Jugador</button> </Link>
                 </div>
                 <div className="players-btn" > 
-                    <button type="button" className="btn btn-secondary btn-lg" id="two-player"onClick={pvp}>Dos Jugadores</button>
+                    <Link to='/pvp'><button type="button" className="btn btn-secondary btn-lg" id="two-player">Dos Jugadores</button> </Link>
                 </div>
             </div>
             <div className="menu-bottom">
